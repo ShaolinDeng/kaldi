@@ -8,7 +8,7 @@ H=`pwd`  #exp home
 n=8      #parallel jobs
 
 #corpus and trans directory
-thchs=/nfs/public/materials/data/thchs30-openslr
+thchs=/data/dengshaolin/github/kaldi/egs/thchs30/s5/data
 
 #you can obtain the database by uncommting the following lines
 #[ -d $thchs ] || mkdir -p $thchs  || exit 1

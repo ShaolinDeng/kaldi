@@ -12,7 +12,7 @@
 # Caution: some of the graph creation steps use quite a bit of memory, so you
 # should run this on a machine that has sufficient memory.
 
-data=/export/a05/xna/data
+data=/data/dengshaolin/github/kaldi/egs/aishell/s5/export/a05/xna/data
 data_url=www.openslr.org/resources/33
 
 . ./cmd.sh

@@ -9,11 +9,11 @@
 KALDI_ROOT=`pwd`/../../..
 export PATH=$PWD/../s5/utils/:$KALDI_ROOT/src/onlinebin:$KALDI_ROOT/src/bin:$PATH
 
-data_file="online-data"
-data_url="http://sourceforge.net/projects/kaldi/files/online-data.tar.bz2"
+#data_file="online-data"
+#data_url="http://sourceforge.net/projects/kaldi/files/online-data.tar.bz2"
 
 # Change this to "tri2a" if you like to test using a ML-trained model
-ac_model_type=tri2b_mmi
+ac_model_type=tri1
 
 # Alignments and decoding results are saved in this directory(simulated decoding only)
 decode_dir="./work"
@@ -28,15 +28,17 @@ ac_model=${data_file}/models/$ac_model_type
 trans_matrix=""
 audio=${data_file}/audio
 
-if [ ! -s ${data_file}.tar.bz2 ]; then
-    echo "Downloading test models and data ..."
-    wget -T 10 -t 3 $data_url;
 
-    if [ ! -s ${data_file}.tar.bz2 ]; then
-        echo "Download of $data_file has failed!"
-        exit 1
-    fi
-fi
+#if [ ! -s ${data_file}.tar.bz2 ]; then
+#    echo "Downloading test models and data ..."
+#    wget -T 10 -t 3 $data_url;
+
+#    if [ ! -s ${data_file}.tar.bz2 ]; then
+#        echo "Download of $data_file has failed!"
+#        exit 1
+#    fi
+#fi
+
 
 if [ ! -d $ac_model ]; then
     echo "Extracting the models and data ..."
@@ -59,6 +61,7 @@ case $test_mode in
         online-gmm-decode-faster --rt-min=0.5 --rt-max=0.7 --max-active=4000 \
            --beam=12.0 --acoustic-scale=0.0769 $ac_model/model $ac_model/HCLG.fst \
            $ac_model/words.txt '1:2:3:4:5' $trans_matrix;;
+
 
     simulated)
         echo

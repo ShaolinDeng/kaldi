@@ -73,10 +73,15 @@ GSYMS
 /src/kaldi.mk.bak
 
 # /egs/
-/egs/*/*/mfcc
-/egs/*/*/plp
-/egs/*/*/exp
-/egs/*/*/data
+/egs/*/s*/mfcc
+/egs/*/s*/plp
+/egs/*/s*/exp
+/egs/*/s*/data
+/egs/aishell/s5/export/
+/egs/thchs30/s5/fbank/
+/egs/voxforge/online_demo/online-data.tar.bz2
+/egs/voxforge/online_demo/online-data/
+/egs/voxforge/online_demo/work/
 
 # /tools/
 /tools/pocolm/
@@ -149,3 +154,16 @@ GSYMS
 /tools/cub-1.8.0/
 /tools/cub
 /tools/python/
+/tools/bazel.zip
+/tools/bazel/
+/tools/faster-rnnlm/
+/tools/morfessor/
+/tools/pitch_trackers/
+/tools/pocolm/
+/tools/speex
+/tools/speex-1.2rc1.tar.gz
+/tools/speex-1.2rc1/
+/tools/tensorflow/
+/tools/tensorflow_build/
+/tools/test_ffi
+/tools/test_ffi.c`
